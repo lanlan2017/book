@@ -21,8 +21,8 @@
         width: 98% !important;
     }
     .back-to-top {
-        bottom: 40px;
-        right: 10px;
+        bottom: 20px;
+        right: 50px;
     }
     pre[class*="language-"] {
         padding: 0em;
