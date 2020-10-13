@@ -1,0 +1,10 @@
+/* section > div > pre > code{
+    font-size: 12px;
+} */
+.navigation {
+	max-width: 40px;
+	min-width: 20px;
+}
+.page-inner {
+	width: 75% !important;
+}
