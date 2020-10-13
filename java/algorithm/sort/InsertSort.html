@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1.2 插入排序 · GitBook</title>
+        <title>InsertSort · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -22,10 +22,6 @@
             
                 
                 <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
@@ -49,7 +45,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -88,7 +84,7 @@
     <link rel="next" href="QuickSort.html" />
     
     
-    <link rel="prev" href="SelectSort.html" />
+    <link rel="prev" href="BubbleSort.html" />
     
 
     </head>
@@ -122,7 +118,7 @@
                 <a href="../../../">
             
                     
-                    Introduction
+                    简介
             
                 </a>
             
@@ -135,7 +131,7 @@
                 <a href="../../">
             
                     
-                    java
+                    Java
             
                 </a>
             
@@ -149,7 +145,7 @@
                 <a href="../">
             
                     
-                    算法
+                    algorithm
             
                 </a>
             
@@ -163,7 +159,7 @@
                 <a href="./">
             
                     
-                    排序算法
+                    sort
             
                 </a>
             
@@ -177,7 +173,7 @@
                 <a href="BubbleSort.html">
             
                     
-                    1.1 冒泡排序
+                    BubbleSort
             
                 </a>
             
@@ -185,25 +181,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.1.2" data-path="SelectSort.html">
-            
-                <a href="SelectSort.html">
-            
-                    
-                    1.2 选择排序
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.1.1.3" data-path="InsertSort.html">
+        <li class="chapter active" data-level="1.2.1.1.2" data-path="InsertSort.html">
             
                 <a href="InsertSort.html">
             
                     
-                    1.2 插入排序
+                    InsertSort
             
                 </a>
             
@@ -211,12 +194,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.1.4" data-path="QuickSort.html">
+        <li class="chapter " data-level="1.2.1.1.3" data-path="QuickSort.html">
             
                 <a href="QuickSort.html">
             
                     
-                    1.2 快速排序
+                    QuickSort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.4" data-path="SelectSort.html">
+            
+                <a href="SelectSort.html">
+            
+                    
+                    SelectSort
             
                 </a>
             
@@ -269,7 +265,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >1.2 插入排序</a>
+        <a href="../../.." >InsertSort</a>
     </h1>
 </div>
 
@@ -285,9 +281,30 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="12-&#x63D2;&#x5165;&#x6392;&#x5E8F;">1.2 &#x63D2;&#x5165;&#x6392;&#x5E8F;</h1>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; lanlan2017.github.io 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-10-13 00:13:06
-</span></footer>
+<h2 id="&#x5173;&#x952E;&#x4EE3;&#x7801;">&#x5173;&#x952E;&#x4EE3;&#x7801;</h2>
+<pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">insertSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> toInsert<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// &#x7F13;&#x5B58;&#x8981;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;</span>
+        toInsert <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x904D;&#x5386;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x6392;&#x5E8F;&#x8981;&#x7684;&#x5E8F;&#x5217;</span>
+        <span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment">// &#x5982;&#x679C;&#x524D;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6BD4;&#x8981;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;&#x5927;,&#x5C31;&#x5C06;&#x8FD9;&#x4E2A;&#x5927;&#x7684;&#x5143;&#x7D20;&#x540E;&#x79FB;&#x4E00;&#x683C;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> toInsert<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// &#x5C06;&#x6BD4;&#x8981;&#x63D2;&#x5165;&#x7684;&#x5143;&#x7D20;&#x5927;&#x7684;&#x5143;&#x7D20;&#x5168;&#x90E8;&#x5411;&#x540E;&#x79FB;&#x52A8;&#x4E00;&#x683C;</span>
+            array<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token comment">// &#x6BD4;&#x8F83;&#x4E0B;&#x4E00;&#x4E2A;&#x683C;</span>
+            j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//</span>
+        array<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> toInsert<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
                                 
                                 </section>
                             
@@ -314,12 +331,12 @@
 
             
                 
-                <a href="SelectSort.html" class="navigation navigation-prev " aria-label="Previous page: 1.2 选择排序">
+                <a href="BubbleSort.html" class="navigation navigation-prev " aria-label="Previous page: BubbleSort">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="QuickSort.html" class="navigation navigation-next " aria-label="Next page: 1.2 快速排序">
+                <a href="QuickSort.html" class="navigation navigation-next " aria-label="Next page: QuickSort">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -330,7 +347,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.2 插入排序","level":"1.2.1.1.3","depth":4,"next":{"title":"1.2 快速排序","level":"1.2.1.1.4","depth":4,"path":"java/algorithm/sort/QuickSort.md","ref":"java/algorithm/sort/QuickSort.md","articles":[]},"previous":{"title":"1.2 选择排序","level":"1.2.1.1.2","depth":4,"path":"java/algorithm/sort/SelectSort.md","ref":"java/algorithm/sort/SelectSort.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","splitter","-lunr","-search","search-pro","tbfed-pagefooter","lightbox","code","-sharing","sharing-plus","intopic-toc","back-to-top-button","expandable-chapters-small","book-summary-scroll-position-saver"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lanlan2017.github.io 2018","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"TOC","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"book-summary-scroll-position-saver":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"qq":true,"qzone":true,"weibo":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"java/algorithm/sort/InsertSort.md","mtime":"2020-10-12T16:13:06.506Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-12T18:11:45.885Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"InsertSort","level":"1.2.1.1.2","depth":4,"next":{"title":"QuickSort","level":"1.2.1.1.3","depth":4,"path":"java/algorithm/sort/QuickSort.md","ref":"java/algorithm/sort/QuickSort.md","articles":[]},"previous":{"title":"BubbleSort","level":"1.2.1.1.1","depth":4,"path":"java/algorithm/sort/BubbleSort.md","ref":"java/algorithm/sort/BubbleSort.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","splitter","-lunr","-search","search-pro","lightbox","code","-sharing","sharing-plus","intopic-toc","back-to-top-button","expandable-chapters-small","-highlight","prism","prism-themes","livereload"],"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"TOC","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"java/algorithm/sort/InsertSort.md","mtime":"2020-10-12T18:55:32.005Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-13T06:47:32.936Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -388,7 +405,7 @@
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
