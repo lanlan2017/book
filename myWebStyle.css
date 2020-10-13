@@ -26,5 +26,6 @@
     }
     pre[class*="language-"] {
         padding: 0em;
+        font-size: 12px;
     }
 }
