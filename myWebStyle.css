@@ -5,6 +5,26 @@
 	max-width: 40px;
 	min-width: 20px;
 }
-.page-inner {
+/* .page-inner {
 	width: 75% !important;
+} */
+.navigation.navigation-next {
+	float: right;
+}
+@media only screen and (max-width: 1400px) {
+    .page-inner {
+        width: 75% !important;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .page-inner {
+        width: 98% !important;
+    }
+    .back-to-top {
+        bottom: 40px;
+        right: 10px;
+    }
+    pre[class*="language-"] {
+        padding: 0em;
+    }
 }
