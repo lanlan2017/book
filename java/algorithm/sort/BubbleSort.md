@@ -5,12 +5,12 @@
 private void bubbleSort(int[] array)
 {
     int temp;
-    // 每次能选出一个最大的元素到尾部
+    // 每次讲一个最大的元素移动到最后
     for (int i = 0; i < array.length; i++)
     {
         for (int j = 0; j < array.length - i - 1; j++)
         {
-            // 如果前面的大于后面的
+            // 比较如果前面的比后面的大,则将大的数交换到后面
             if (array[j] > array[j + 1])
             {
                 temp = array[j];
@@ -18,8 +18,6 @@ private void bubbleSort(int[] array)
                 array[j + 1] = temp;
             }
         }
-        // 打印这次排序的结果
-        printSortingSteps(array, i);
     }
 }
 ```

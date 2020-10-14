@@ -227,6 +227,70 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3" data-path="../../../git/">
+            
+                <a href="../../../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../git/remote/">
+            
+                <a href="../../../git/remote/">
+            
+                    
+                    远程仓库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../git/remote/git_clone.html">
+            
+                <a href="../../../git/remote/git_clone.html">
+            
+                    
+                    git clone
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../git/remote/git_remote.html">
+            
+                <a href="../../../git/remote/git_remote.html">
+            
+                    
+                    git remote
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -277,12 +341,12 @@
 <pre class="language-"><code class="lang-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> temp<span class="token punctuation">;</span>
-    <span class="token comment">// &#x6BCF;&#x6B21;&#x80FD;&#x9009;&#x51FA;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x5230;&#x5C3E;&#x90E8;</span>
+    <span class="token comment">// &#x6BCF;&#x6B21;&#x8BB2;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x540E;</span>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token comment">// &#x5982;&#x679C;&#x524D;&#x9762;&#x7684;&#x5927;&#x4E8E;&#x540E;&#x9762;&#x7684;</span>
+            <span class="token comment">// &#x6BD4;&#x8F83;&#x5982;&#x679C;&#x524D;&#x9762;&#x7684;&#x6BD4;&#x540E;&#x9762;&#x7684;&#x5927;,&#x5219;&#x5C06;&#x5927;&#x7684;&#x6570;&#x4EA4;&#x6362;&#x5230;&#x540E;&#x9762;</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> array<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
             <span class="token punctuation">{</span>
                 temp <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -290,8 +354,6 @@
                 array<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token comment">// &#x6253;&#x5370;&#x8FD9;&#x6B21;&#x6392;&#x5E8F;&#x7684;&#x7ED3;&#x679C;</span>
-        <span class="token function">printSortingSteps</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -338,7 +400,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"冒泡排序","level":"1.2.1.1.1","depth":4,"next":{"title":"插入排序","level":"1.2.1.1.2","depth":4,"path":"java/algorithm/sort/InsertSort.md","ref":"java/algorithm/sort/InsertSort.md","articles":[]},"previous":{"title":"排序","level":"1.2.1.1","depth":3,"path":"java/algorithm/sort/README.md","ref":"java/algorithm/sort/README.md","articles":[{"title":"冒泡排序","level":"1.2.1.1.1","depth":4,"path":"java/algorithm/sort/BubbleSort.md","ref":"java/algorithm/sort/BubbleSort.md","articles":[]},{"title":"插入排序","level":"1.2.1.1.2","depth":4,"path":"java/algorithm/sort/InsertSort.md","ref":"java/algorithm/sort/InsertSort.md","articles":[]},{"title":"快速排序","level":"1.2.1.1.3","depth":4,"path":"java/algorithm/sort/QuickSort.md","ref":"java/algorithm/sort/QuickSort.md","articles":[]},{"title":"选择排序","level":"1.2.1.1.4","depth":4,"path":"java/algorithm/sort/SelectSort.md","ref":"java/algorithm/sort/SelectSort.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","splitter","-lunr","-search","search-pro","lightbox","code","-sharing","sharing-plus","intopic-toc","back-to-top-button","expandable-chapters-small","-highlight","prism","prism-themes"],"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"TOC","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"myWebStyle.css"}},"file":{"path":"java/algorithm/sort/BubbleSort.md","mtime":"2020-10-13T05:15:22.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-13T09:22:52.934Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"冒泡排序","level":"1.2.1.1.1","depth":4,"next":{"title":"插入排序","level":"1.2.1.1.2","depth":4,"path":"java/algorithm/sort/InsertSort.md","ref":"java/algorithm/sort/InsertSort.md","articles":[]},"previous":{"title":"排序","level":"1.2.1.1","depth":3,"path":"java/algorithm/sort/README.md","ref":"java/algorithm/sort/README.md","articles":[{"title":"冒泡排序","level":"1.2.1.1.1","depth":4,"path":"java/algorithm/sort/BubbleSort.md","ref":"java/algorithm/sort/BubbleSort.md","articles":[]},{"title":"插入排序","level":"1.2.1.1.2","depth":4,"path":"java/algorithm/sort/InsertSort.md","ref":"java/algorithm/sort/InsertSort.md","articles":[]},{"title":"快速排序","level":"1.2.1.1.3","depth":4,"path":"java/algorithm/sort/QuickSort.md","ref":"java/algorithm/sort/QuickSort.md","articles":[]},{"title":"选择排序","level":"1.2.1.1.4","depth":4,"path":"java/algorithm/sort/SelectSort.md","ref":"java/algorithm/sort/SelectSort.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","splitter","-lunr","-search","search-pro","lightbox","code","-sharing","sharing-plus","intopic-toc","back-to-top-button","expandable-chapters-small","-highlight","prism","prism-themes"],"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"TOC","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"myWebStyle.css"}},"file":{"path":"java/algorithm/sort/BubbleSort.md","mtime":"2020-10-13T13:36:33.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-14T15:32:47.967Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

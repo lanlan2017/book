@@ -4,6 +4,7 @@
 ```java
 private void insertSort(int[] array)
 {
+    // 缓存,用于保存需要插入的元素
     int toInsert;
     for (int i = 1; i < array.length; i++)
     {
@@ -19,7 +20,6 @@ private void insertSort(int[] array)
             // 比较下一个格
             j--;
         }
-        //
         array[j + 1] = toInsert;
     }
 }
